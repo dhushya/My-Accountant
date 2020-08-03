@@ -13,7 +13,7 @@ export default class IconArray extends React.Component {
                 <Image style={styles.icons} source={require("../assets/settings.png")}></Image>
                 <Text>Settings</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.icons}>
+            <TouchableOpacity style={styles.icons} onPress={() => {this.props.navigation.navigate("New")}}>
                 <Image style={styles.icons} source={require("../assets/add_new.png")}></Image>
                 <Text>Add New</Text>
             </TouchableOpacity>

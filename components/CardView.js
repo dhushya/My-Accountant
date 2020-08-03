@@ -9,7 +9,7 @@ export default class CardView extends React.Component {
             <Text style={styles.heading}>Total Expenses Today : {expenses}</Text>
             <Image style={styles.image} source={require("../assets/image.bmp")} />
             <View style={styles.iconarray}>
-            <IconArray style={styles.iconarray} />
+            <IconArray style={styles.iconarray} navigation = {this.props.navigation} />
             </View>
         </View>
         );

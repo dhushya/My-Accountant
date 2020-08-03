@@ -5,10 +5,10 @@ import CardView from './CardView';
 import History from './History';
 import Add from './Add';
 
-export default function App() {
+export default function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <CardView />
+      <CardView navigation = {navigation}/>
       <StatusBar style="auto"/>
       <History />
     </View>

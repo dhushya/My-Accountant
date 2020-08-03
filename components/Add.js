@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions, Image} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 const height = Dimensions.get('window').height;
 export default class Add extends React.Component {
@@ -19,7 +19,9 @@ export default class Add extends React.Component {
                         placeholder="₹0000"></TextInput>
                 </Card>
                 <View style={styles.button}>
-                    <View style={styles.empty} ></View>
+                    <View style={styles.empty} >
+                        <Text style={styles.quotes}>{"\""}Money Spent Is money gained{"\""}{"\n\n"}-The Author of this app</Text>
+                    </View>
                     <TouchableOpacity title="hello" style={styles.TouchableOpacity}>
                         <Text style={styles.submit}>Submit</Text>
                     </TouchableOpacity>
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
         padding: 10,
         // fontWeight: "bold",
         letterSpacing: 3,
-        color: '#f5f6fa'
+        color: '#000'
     },
     container: { 
         height: 350,
@@ -55,12 +57,13 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         textAlign: 'center',
         padding: 10,
-        elevation: 2,
-        backgroundColor: "#2f3640",
+        elevation: 10,
+        backgroundColor: "#f5f6fa",
         borderRadius: 20,
+        margin: 10,
     },
     forminput: {
-        backgroundColor: "#576574",
+        backgroundColor: "#fff",
         borderRadius: 30,
         height: 60,
         padding: 10,
@@ -68,37 +71,53 @@ const styles = StyleSheet.create({
         alignSelf: 'stretch',
         paddingLeft: 20,
         fontSize: 20,
-        color: '#fff'
+        color: '#000'
     },
     amount: {
         flex: 1,
-        backgroundColor: "#f5f6fa",
+        backgroundColor: "#fff",
         height: 50,
         fontSize: 30,
         borderRadius: 10,
         width: 100
     },
     TouchableOpacity: {
-        margin: 10,
-        backgroundColor: "#000000",
+        backgroundColor: "#ecf0f1",
         height: 60,
-        borderRadius: 40,
+        borderRadius: 20,
+        marginBottom: 10,
+        marginRight: 10,
+        marginLeft: 10,
+        justifyContent: 'center',
+        borderColor: "#000",
+        borderWidth: 2
     },
     screen: {
-        backgroundColor: "#2c3e50",
+        backgroundColor: "#f5f6fa",
         flex: 1,
     },
     button: {
         justifyContent: 'flex-end',
         flex: 1.5,
-        backgroundColor: "#2c3e50"
+        backgroundColor: "#f5f6fa"
     }, 
     empty: {
         flex: 6,
+        alignSelf: 'stretch',
+        width: "100%",
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     submit: {
-        color: "white",
+        color: "#000",
         textAlign: 'center',
-        margin: 20,
+        justifyContent: 'center',
+        fontWeight: 'normal',
+        letterSpacing: 2,
+        fontSize: 20
+    }, 
+    quotes: {
+        color: "#9e9e9e",
+        fontSize: 20,
     }
 })
